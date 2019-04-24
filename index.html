@@ -8,22 +8,23 @@
 </head>
 <body>
 
-    <div id="addButton">Press Me</div>
-    <div id="seeButton">Press Me</div>
+    <div id="addButton">Add to Storage</div>
+    <div id="seeButton">View Storage</div>
     <input type="text" id="firstName">
     <script>
  
         document.getElementById('addButton').addEventListener('click',addToStorage);
         document.getElementById('seeButton').addEventListener('click',viewStorage);
 
-        function addToStorage(){
+        function addToStorage(){ 
             let tempValue = document.getElementById('firstName').value;
+            
             console.log('Clicked'+tempValue);
         }
         function viewStorage(){
-           
-            console.log('Clicked');
-        }
+           let tempHolder = localStorage.getItem('tester')
+            console.log('Clicked'+tempHolder);
+        } 
 
 
 
