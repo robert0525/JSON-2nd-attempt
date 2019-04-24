@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON 2nd</title>
+</head>
+<body>
+
+    <div id="button">Press Me</div>
+    <input type="text" id="firstName">
+    <script>
+
+        document.getElementById('button').addEventListener('click',addToStorage);
+
+        function addToStorage(){
+            console.log('Clicked');
+        }
+
+        var myJSON = {"first":"Robert", "Last":"Rydlewski"};
+        console.log(myJSON);
+        var myJSONstringified = JSON.stringify(myJSON);
+        console.log(myJSONstringified);
+        var myJSONparsed = JSON.parse(myJSONstringified);
+        myJSONparsed.first = "John";
+        console.log(myJSONparsed);
+        var sendData = JSON.stringify(myJSONparsed);
+        console.log(sendData);
+    
+    </script>
+</body> 
+</html>
