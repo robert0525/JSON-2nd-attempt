@@ -8,15 +8,24 @@
 </head>
 <body>
 
-    <div id="button">Press Me</div>
+    <div id="addButton">Press Me</div>
+    <div id="seeButton">Press Me</div>
     <input type="text" id="firstName">
     <script>
-
-        document.getElementById('button').addEventListener('click',addToStorage);
+ 
+        document.getElementById('addButton').addEventListener('click',addToStorage);
+        document.getElementById('seeButton').addEventListener('click',viewStorage);
 
         function addToStorage(){
+            let tempValue = document.getElementById('firstName').value;
+            console.log('Clicked'+tempValue);
+        }
+        function viewStorage(){
+           
             console.log('Clicked');
         }
+
+
 
         var myJSON = {"first":"Robert", "Last":"Rydlewski"};
         console.log(myJSON);
